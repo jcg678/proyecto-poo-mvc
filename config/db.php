@@ -3,7 +3,7 @@
 class DataBase
 {
 	
-	function static function connect(){
+	 static function connect(){
 		$db = new mysqli('localhost','root','','tienda_master');
 		$db->query("SET NAMES 'utf8'");
 		return $db;
