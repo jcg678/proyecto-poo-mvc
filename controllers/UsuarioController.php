@@ -49,7 +49,7 @@ class usuarioController{
 			$usuario->setEmail($_POST['email']);
 			$usuario->setPassword($_POST['password']);
 			$identity = $usuario->login();
-			
+
 
 			if($identity && is_object($identity)){
 				$_SESSION['identity']= $identity;
@@ -65,6 +65,18 @@ class usuarioController{
 		header('Location:'.base_url);
 	}
 
+	public function logout(){
+		if(isset($_SESSION['identity'])){
+			unset($_SESSION['identity']);
+		}
+
+
+		if(isset($_SESSION['admin'])){
+			unset($_SESSION['admin']);
+		}
+
+		header('Location:'.base_url);
+	}
 
 
 }
