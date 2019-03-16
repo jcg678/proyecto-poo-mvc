@@ -284,3 +284,11 @@ button{
 	background:#222222;
 	border-top: 4px solid #01b1ea;
 }
+
+.alert-green{
+	color:green;
+}
+
+.alert-red{
+	color:red;
+}
