@@ -18,23 +18,18 @@
 				</div>	
 			</header>
 			<!--Menu-->
+			<?php $categorias= Utils::showCategorias(); ?>
 			<nav id="menu">
 				<ul>
 					<li>
 						<a href="#">Inicio</a>
 					</li>
+					<?php while($cat = $categorias->fetch_object()): ?>
 					<li>
-						<a href="#">Cat 1</a>
+						<a href="#"><?=$cat->nombre?></a>
 					</li>
-					<li>
-						<a href="#">Cat 2</a>
-					</li>
-					<li>
-						<a href="#">Cat 3</a>
-					</li>
-					<li>
-						<a href="#">Cat 4</a>
-					</li>																	
+					<?php endwhile; ?>
+																			
 				</ul>	
 				
 			</nav>
