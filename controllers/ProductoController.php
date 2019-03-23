@@ -36,7 +36,7 @@ class productoController{
 				$producto->setStock($stock);
 				$producto->setCategoria_id($categoria);	
 				
-				$producto->save();
+				$save=$producto->save();
 
 				if($save){
 					$_SESSION['producto']= "complete";
