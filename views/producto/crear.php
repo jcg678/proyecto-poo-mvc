@@ -1,6 +1,6 @@
 <?php if(isset($edit) && isset($pro) && is_object($pro)): ?>
 	<h1>Editar producto <?=$pro->nombre?></h1>
-	<?php  $url_action = base_url."producto/edit&id=".$pro->id; ?>
+	<?php  $url_action = base_url."producto/save&id=".$pro->id; ?>
 <?php else:?>
 	<h1>Crear nuevos productos</h1>
 	<?php $url_action = base_url."producto/save"; ?>
@@ -13,7 +13,7 @@
 		<input type="text" name="nombre" value="<?=isset($pro) && is_object($pro) ? $pro->nombre : '' ?>"/>
 
 		<label for="descripcion">Descripcion</label>
-		<textarea name="descripcion"> <?=isset($pro) && is_object($pro) ? $pro->descripcion : '' ?></textarea>
+		<textarea name="descripcion"><?=isset($pro) && is_object($pro) ? $pro->descripcion : '' ?></textarea>
 
 		<label for="precio">Precio</label>
 		<input type="text" name="precio" value="<?=isset($pro) && is_object($pro) ? $pro->precio : '' ?>"/>
@@ -33,7 +33,7 @@
 
 		<label for="imagen">Imagen</label>
 		<?php if(isset($pro) && is_object($pro) && !empty($pro->imagen)):?>
-			<img src="<?=base_url?>uploads/images/<?=$pro->imagen?>" /> 
+			<img src="<?=base_url?>uploads/images/<?=$pro->imagen?>" width="100px" height="auto" /> 
 		<?php endif;?>	
 		<input type="file" name="imagen" />
 
