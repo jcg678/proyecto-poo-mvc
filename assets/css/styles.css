@@ -275,7 +275,7 @@ button{
 /**produtos*/
 .product{
 	width: 30%;
-
+	margin-bottom: 30px;
 	float: left;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -283,6 +283,7 @@ button{
 }
 
 .product img{
+	height: 120px;
 	width: 100px;
 	margin-bottom: 10px;
 }
