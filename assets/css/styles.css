@@ -383,3 +383,22 @@ td{
 	border-top:1px solid #ccc;
 	padding: 2px ;
 }
+
+/*CARRITO*/
+
+.button-pedido{
+	display: block;
+	width: 100px;
+	float: right;
+}
+
+.total-carrito h3{
+	display: block;
+	float: left;
+	margin-top: 5px;
+}
+
+.total-carrito{
+	width: 355px;
+	float: right;	
+}

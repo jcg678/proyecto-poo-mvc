@@ -24,4 +24,11 @@
 			<td><?=$elemento['unidades']?></td>
 		</tr>	
 	<?php endforeach ?>	
-</table>	
+</table>
+<br/>
+
+<?php $stats=Utils::statsCarrito(); ?>
+<div class="total-carrito">
+	<h3>Precio Total: <?=$stats['total']?> Euros</h3>	
+	<a href="" class="button button-pedido">Hacer Pedido</a>
+</div>
