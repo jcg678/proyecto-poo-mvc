@@ -111,6 +111,14 @@ class Pedido
 		return $pedido;
 	}
 
+	public function getAllByUser(){
+		$sql = "SELECT p.* FROM pedidos p ".
+		"where p.usuario_id = {$this->getUsuario_id()} ORDER BY id ";
+		$pedido = $this->db->query($sql);
+		return $pedido;
+	}
+
+
 	public function getProductosByPedido($id){
 		//$sql ="SELECT * from productos where id in (SELECT producto_id FROM lineas_pedidos where pedido_id = {$id})";
 

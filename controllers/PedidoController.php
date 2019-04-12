@@ -60,4 +60,13 @@ class pedidoController
 		}
 		require_once 'views/pedido/confirmado.php';
 	}
+
+	public function mis_pedidos(){
+		Utils::isIdentity();
+		$pedido = new Pedido();
+		$pedido->setUsuario_id($_SESSION['identity']->id);
+		$pedidos=$pedido->getAllByUser();
+
+		require_once 'views/pedido/mis_pedidos.php';
+	}
 }
