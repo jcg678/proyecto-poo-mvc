@@ -420,3 +420,15 @@ td{
 	margin: 0px auto;
 	text-align: center;
 }
+
+.updown-unidades .button{
+	width: 20px;
+	display: block;
+	float: left;
+	padding:2px;
+	margin-left: 7px; 
+}
+.updown-unidades{
+	width: 80px;
+	margin: 0px auto;
+}
