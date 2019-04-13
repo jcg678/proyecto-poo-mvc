@@ -20,7 +20,7 @@
 			</td>
 			<td><?=$ped->coste?> Euros</td>
 			<td><?=$ped->fecha?></td>
-			<td><?=$ped->estado?></td>
+			<td><?=Utils::showStatus($ped->estado)?></td>
 		</tr>	
 	<?php endwhile; ?>	
 </table>
